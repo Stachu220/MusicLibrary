@@ -39,6 +39,11 @@ namespace MusicLibrary.ViewModel
             _repository.AddSoundtrack(newSoundtrack);
             Soundtracks.Add(newSoundtrack);
         }
+
+        private void RemoveSoundtrack(Soundtrack soundtrack)
+        {
+            // Remove the selected soundtrack
+        }
     }
 }
     
