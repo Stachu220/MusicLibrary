@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MusicLibrary
@@ -17,7 +18,7 @@ namespace MusicLibrary
     /// <summary>
     /// Logika interakcji dla klasy AddSong.xaml
     /// </summary>
-    public partial class AddSong : Window
+    public partial class AddSong : Page
     {
         public AddSong()
         {

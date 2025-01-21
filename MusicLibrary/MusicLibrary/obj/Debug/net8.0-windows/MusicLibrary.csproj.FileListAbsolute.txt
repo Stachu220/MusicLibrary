@@ -37,3 +37,5 @@ C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary\obj\Debug
 C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary\obj\Debug\net8.0-windows\AddSong.g.cs
 C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary\obj\Debug\net8.0-windows\MusicLibrary_MarkupCompile.lref
 C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary\obj\Debug\net8.0-windows\AddSong.baml
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary\obj\Debug\net8.0-windows\FolkCategory.g.cs
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary\obj\Debug\net8.0-windows\FolkCategory.baml

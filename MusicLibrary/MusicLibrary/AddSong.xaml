@@ -1,4 +1,4 @@
-﻿<Window x:Class="MusicLibrary.AddSong"
+﻿<Page x:Class="MusicLibrary.AddSong"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -23,7 +23,16 @@
                     <StackPanel Orientation="Vertical" Margin="378,50,10,10">
                         <TextBox Text="Name" Margin="0,0,0,10"/>
                         <TextBox Text="Description" Margin="0,0,0,10"/>
-                        <ComboBox Text="Cat. from list" Margin="0,0,0,10"/>
+                        <ComboBox Text="Cat. from list" Margin="0,0,0,10">
+                            <ComboBoxItem>Folk</ComboBoxItem>
+                            <ComboBoxItem>Battle</ComboBoxItem>
+                            <ComboBoxItem>Tavern</ComboBoxItem>
+                            <ComboBoxItem>Forest</ComboBoxItem>
+                            <ComboBoxItem>Cavern</ComboBoxItem>
+                            <ComboBoxItem>Night</ComboBoxItem>
+                            <ComboBoxItem>Epic moment</ComboBoxItem>
+                        </ComboBox>
+
                         <TextBox Text="Tags"/>
                     </StackPanel>
 
@@ -36,4 +45,4 @@
             </Border>
         </Grid>
     </Grid>
-</Window>
+</Page>
