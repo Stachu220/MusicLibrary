@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 
-namespace MusicLibrary.Database
+namespace MusicLibrary2.Database
 {
     internal class DatabaseInit
     {
@@ -18,8 +18,7 @@ namespace MusicLibrary.Database
 
                 var createCategoryTable = @"CREATE TABLE IF NOT EXISTS Category (
                     ID INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Name TEXT NOT NULL,
-                    Description TEXT
+                    Name TEXT NOT NULL
                 )";
 
                 using (var command = new SQLiteCommand(createCategoryTable, connection))
@@ -33,9 +32,7 @@ namespace MusicLibrary.Database
                 DisplayName TEXT NOT NULL,
                 CategoryID INTEGER NOT NULL,
                 Duration TEXT,
-                DateAdded DATETIME DEFAULT CURRENT_TIMESTAMP,
                 Tags TEXT,
-                FileFormat TEXT,
                 FOREIGN KEY(CategoryID) REFERENCES Category(ID)
                 );";
 

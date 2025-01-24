@@ -39,3 +39,15 @@ C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debu
 C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\MusicLibrary2.pdb
 C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\MusicLibrary2.genruntimeconfig.cache
 C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\ref\MusicLibrary2.dll
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\BattleCategory.g.cs
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\CavernCategory.g.cs
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\EpicCategory.g.cs
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\ForestCategory.g.cs
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\NightCategory.g.cs
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\TavernCategory.g.cs
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\BattleCategory.baml
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\CavernCategory.baml
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\EpicCategory.baml
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\ForestCategory.baml
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\NightCategory.baml
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\TavernCategory.baml

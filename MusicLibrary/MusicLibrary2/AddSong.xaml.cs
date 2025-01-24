@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,12 +17,10 @@ using System.Windows.Shapes;
 
 namespace MusicLibrary2
 {
-    /// <summary>
-    /// Logika interakcji dla klasy AddSong.xaml
-    /// </summary>
     public partial class AddSong : UserControl
     {
         private UserControl _uc;
+        private string selectedFilePath;
         public AddSong(UserControl uc)
         {
             InitializeComponent();
@@ -34,7 +34,12 @@ namespace MusicLibrary2
 
         private async void saveClicked(object sender, RoutedEventArgs e)
         {
-            PopUpText.Text = "Song Added to the library!";
+            string title = Title.Text;
+            string description = Description.Text;
+            string category = CatCombo.Text;
+            string tags = Tags.Text;
+
+            PopUpText.Text = "Song Added to the library!" + title + "\n" + description + "\n" + category + "\n" + tags;
             PopUp.Visibility = Visibility.Visible;
             //add song to database
             /*
@@ -60,6 +65,28 @@ namespace MusicLibrary2
             PopUp.Visibility = Visibility.Visible;
             await Task.Delay(1500);
             PopUp.Visibility = Visibility.Hidden;
+        }
+
+        private void onFileDrop(object sender, DragEventArgs e)
+        {
+            selectedFilePath = (string)e.Data.GetData(DataFormats.FileDrop);
+
+            SelectedFile.Text = selectedFilePath;
+        }
+
+        private void browseClicked(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Audio Files|*.mp3;*.wav;*.flac;*.aac|All Files|*.*", // Filter for audio files
+                Multiselect = false //only one file
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                selectedFilePath = openFileDialog.FileName;
+                SelectedFile.Text = selectedFilePath;
+            }
         }
     }
 }

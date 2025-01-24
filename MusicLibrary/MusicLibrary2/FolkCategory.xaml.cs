@@ -58,5 +58,35 @@ namespace MusicLibrary2
         {
             ((MainWindow)Application.Current.MainWindow).NavigateTo(new AddSong(this));
         }
+
+        private void goToBattle(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).NavigateTo(new BattleCategory());
+        }
+
+        private void goToTavern(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).NavigateTo(new TavernCategory());
+        }
+
+        private void goToCavern(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).NavigateTo(new CavernCategory());
+        }
+
+        private void goToForest(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).NavigateTo(new ForestCategory());
+        }
+
+        private void goToNight(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).NavigateTo(new NightCategory());
+        }
+
+        private void goToEpic(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).NavigateTo(new EpicCategory());
+        }
     }
 }

@@ -7,13 +7,51 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="BattleCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CavernCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EpicCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ForestCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="NightCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TavernCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="AddSong.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BattleCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CavernCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EpicCategory.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="FolkCategory.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ForestCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="NightCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TavernCategory.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

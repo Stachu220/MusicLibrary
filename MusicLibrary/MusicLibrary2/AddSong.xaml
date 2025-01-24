@@ -6,6 +6,30 @@
         xmlns:local="clr-namespace:MusicLibrary2"
         mc:Ignorable="d"
              Height="450" Width="800">
+    <UserControl.Resources>
+        <Style x:Key="BrowseButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="5,2"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                            BorderBrush="{TemplateBinding BorderBrush}" 
+                                            BorderThickness="{TemplateBinding BorderThickness}" 
+                                            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <!-- Add Song View -->
         <Grid x:Name="AddSongView" Visibility="Visible">
@@ -15,9 +39,16 @@
                     <Button Content="⟵" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Click="backClicked"/>
 
                     <!-- Drop File Section -->
-                    <Border BorderBrush="White" BorderThickness="2" CornerRadius="5" Margin="10,50,400,10">
-                        <TextBlock Text="Drop File Here" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    </Border>
+                    <StackPanel Orientation="Vertical" Margin="10,50,383,10" Drop="onFileDrop" AllowDrop="True">
+                        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="15" Margin="0,0,0,5" Height="344"  Background="Beige">
+                            <Grid>
+                                <TextBlock x:Name="DropText" Text="Drop file here" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,117,0,0"/>
+                                <TextBlock x:Name="DropText2" Text="or search for it:" FontSize="23" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <Button x:Name="BrowseButton" Content="Browse" Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Click="browseClicked" Margin="0,209,0,0" Style="{StaticResource BrowseButtonStyle}"/>
+                                <TextBlock x:Name="SelectedFile" Text="" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,261,0,0"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
 
                     <!-- Input Fields -->
                     <StackPanel Orientation="Vertical" Margin="378,50,10,10">

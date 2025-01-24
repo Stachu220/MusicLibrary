@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicLibrary.Database
+namespace MusicLibrary2.Database
 {
     internal class SoundtrackRepo
     {

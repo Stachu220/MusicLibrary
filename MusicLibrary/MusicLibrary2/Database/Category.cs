@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicLibrary.Database
+namespace MusicLibrary2.Database
 {
     public class Category
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
     }
 }

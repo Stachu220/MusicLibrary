@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\App.xaml
-31476968886
+91962179872
 
-13169126693
+19-661125155
 203-568679851
-AddSong.xaml;FolkCategory.xaml;MainWindow.xaml;
+AddSong.xaml;BattleCategory.xaml;CavernCategory.xaml;EpicCategory.xaml;FolkCategory.xaml;ForestCategory.xaml;MainWindow.xaml;NightCategory.xaml;TavernCategory.xaml;
 
 False
 
