@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\addsong.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|solutionrelative:musiclibrary2\\addsong.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|solutionrelative:musiclibrary2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\database\\soundtrackrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|solutionrelative:musiclibrary2\\database\\soundtrackrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\addsong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|solutionrelative:musiclibrary2\\addsong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\database\\databaseinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|solutionrelative:musiclibrary2\\database\\databaseinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\addsong.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|solutionrelative:musiclibrary2\\addsong.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\database\\soundtrackrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|solutionrelative:musiclibrary2\\database\\soundtrackrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\folkcategory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|solutionrelative:musiclibrary2\\folkcategory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\viewmodel\\soundtrackviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,14 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\database\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|solutionrelative:musiclibrary2\\database\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\addsong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|solutionrelative:musiclibrary2\\addsong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\folkcategory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|solutionrelative:musiclibrary2\\folkcategory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{076BAECD-058A-4745-BF38-95ABAC18AF79}|MusicLibrary2\\MusicLibrary2.csproj|c:\\users\\stach\\documents\\github\\musiclibrary\\musiclibrary\\musiclibrary2\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -94,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 379,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,20 +102,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "SoundtrackRepo.cs",
               "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\SoundtrackRepo.cs",
               "RelativeDocumentMoniker": "MusicLibrary2\\Database\\SoundtrackRepo.cs",
               "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\SoundtrackRepo.cs",
               "RelativeToolTip": "MusicLibrary2\\Database\\SoundtrackRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAqwFwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T20:52:19.582Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\ViewModel\\Player.cs",
               "RelativeDocumentMoniker": "MusicLibrary2\\ViewModel\\Player.cs",
@@ -123,90 +123,24 @@
               "RelativeToolTip": "MusicLibrary2\\ViewModel\\Player.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T18:02:56.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T18:02:56.636Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AddSong.xaml.cs",
               "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\AddSong.xaml.cs",
               "RelativeDocumentMoniker": "MusicLibrary2\\AddSong.xaml.cs",
               "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\AddSong.xaml.cs",
               "RelativeToolTip": "MusicLibrary2\\AddSong.xaml.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAiwCQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAEgAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-21T20:32:34.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SoundtrackViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\ViewModel\\SoundtrackViewModel.cs",
-              "RelativeDocumentMoniker": "MusicLibrary2\\ViewModel\\SoundtrackViewModel.cs",
-              "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\ViewModel\\SoundtrackViewModel.cs",
-              "RelativeToolTip": "MusicLibrary2\\ViewModel\\SoundtrackViewModel.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCwAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T22:29:34.533Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Soundtrack.cs",
-              "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\Soundtrack.cs",
-              "RelativeDocumentMoniker": "MusicLibrary2\\Database\\Soundtrack.cs",
-              "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\Soundtrack.cs",
-              "RelativeToolTip": "MusicLibrary2\\Database\\Soundtrack.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T20:53:31.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\Category.cs",
-              "RelativeDocumentMoniker": "MusicLibrary2\\Database\\Category.cs",
-              "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\Category.cs",
-              "RelativeToolTip": "MusicLibrary2\\Database\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T20:53:22.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MusicLibrary2\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MusicLibrary2\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAgwBkAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T22:01:01.88Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DatabaseInit.cs",
-              "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\DatabaseInit.cs",
-              "RelativeDocumentMoniker": "MusicLibrary2\\Database\\DatabaseInit.cs",
-              "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\DatabaseInit.cs",
-              "RelativeToolTip": "MusicLibrary2\\Database\\DatabaseInit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T22:03:12.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "AddSong.xaml",
               "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\AddSong.xaml",
               "RelativeDocumentMoniker": "MusicLibrary2\\AddSong.xaml",
@@ -214,6 +148,68 @@
               "RelativeToolTip": "MusicLibrary2\\AddSong.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-01-24T20:14:30.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SoundtrackViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\ViewModel\\SoundtrackViewModel.cs",
+              "RelativeDocumentMoniker": "MusicLibrary2\\ViewModel\\SoundtrackViewModel.cs",
+              "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\ViewModel\\SoundtrackViewModel.cs",
+              "RelativeToolTip": "MusicLibrary2\\ViewModel\\SoundtrackViewModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T22:29:34.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Soundtrack.cs",
+              "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\Soundtrack.cs",
+              "RelativeDocumentMoniker": "MusicLibrary2\\Database\\Soundtrack.cs",
+              "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\Soundtrack.cs",
+              "RelativeToolTip": "MusicLibrary2\\Database\\Soundtrack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T20:53:31.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\Category.cs",
+              "RelativeDocumentMoniker": "MusicLibrary2\\Database\\Category.cs",
+              "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\Category.cs",
+              "RelativeToolTip": "MusicLibrary2\\Database\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T20:53:22.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MusicLibrary2\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MusicLibrary2\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T22:01:01.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DatabaseInit.cs",
+              "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\DatabaseInit.cs",
+              "RelativeDocumentMoniker": "MusicLibrary2\\Database\\DatabaseInit.cs",
+              "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\Database\\DatabaseInit.cs",
+              "RelativeToolTip": "MusicLibrary2\\Database\\DatabaseInit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T22:03:12.128Z",
               "EditorCaption": ""
             },
             {
@@ -226,18 +222,17 @@
               "RelativeToolTip": "MusicLibrary2\\NightCategory.xaml.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAYwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T20:43:27.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:43:27.557Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "FolkCategory.xaml.cs",
               "DocumentMoniker": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\FolkCategory.xaml.cs",
               "RelativeDocumentMoniker": "MusicLibrary2\\FolkCategory.xaml.cs",
               "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\FolkCategory.xaml.cs",
               "RelativeToolTip": "MusicLibrary2\\FolkCategory.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-21T21:54:01.244Z",
               "EditorCaption": ""
@@ -263,8 +258,7 @@
               "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\FolkCategory.xaml",
               "RelativeToolTip": "MusicLibrary2\\FolkCategory.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-24T20:40:36.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:40:36.266Z"
             },
             {
               "$type": "Document",
@@ -275,8 +269,7 @@
               "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\CavernCategory.xaml",
               "RelativeToolTip": "MusicLibrary2\\CavernCategory.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-24T20:44:33.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:44:33.67Z"
             },
             {
               "$type": "Document",
@@ -288,8 +281,7 @@
               "RelativeToolTip": "MusicLibrary2\\TavernCategory.xaml.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAYwEYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T20:43:51.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:43:51.185Z"
             },
             {
               "$type": "Document",
@@ -301,8 +293,7 @@
               "RelativeToolTip": "MusicLibrary2\\ForestCategory.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T20:43:01.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:43:01.349Z"
             },
             {
               "$type": "Document",
@@ -314,8 +305,7 @@
               "RelativeToolTip": "MusicLibrary2\\EpicCategory.xaml.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAYwEIAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T20:42:23.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:42:23.08Z"
             },
             {
               "$type": "Document",
@@ -327,8 +317,7 @@
               "RelativeToolTip": "MusicLibrary2\\CavernCategory.xaml.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAYwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T20:41:46.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:41:46.439Z"
             },
             {
               "$type": "Document",
@@ -339,8 +328,7 @@
               "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\NightCategory.xaml",
               "RelativeToolTip": "MusicLibrary2\\NightCategory.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-24T20:44:54.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:44:54.862Z"
             },
             {
               "$type": "Document",
@@ -351,8 +339,7 @@
               "ToolTip": "C:\\Users\\stach\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary2\\ForestCategory.xaml",
               "RelativeToolTip": "MusicLibrary2\\ForestCategory.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-24T20:45:09.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:45:09.51Z"
             },
             {
               "$type": "Document",
@@ -364,8 +351,7 @@
               "RelativeToolTip": "MusicLibrary2\\BattleCategory.xaml.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAYwEcAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T20:41:24.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:41:24.941Z"
             }
           ]
         }

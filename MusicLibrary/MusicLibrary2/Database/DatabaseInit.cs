@@ -10,12 +10,12 @@ namespace MusicLibrary2.Database
 {
     internal class DatabaseInit
     {
-        private const string ConnectionString = "Data Source=musiclibrary.db;";
+        private const string ConnectionString = "Data Source=Musiclibrary.db; Version=3";
         public static void InitDatabase()
         {
-            if (!File.Exists("musiclibrary.db"))
+            if (!File.Exists("Musiclibrary.db"))
             {
-                SQLiteConnection.CreateFile("musiclibrary.db");
+                SQLiteConnection.CreateFile("Musiclibrary.db");
 
                 using var connection = new SQLiteConnection(ConnectionString);
                 connection.Open();

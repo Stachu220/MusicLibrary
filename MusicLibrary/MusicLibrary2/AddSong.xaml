@@ -57,14 +57,14 @@
                         <Label Content="Description" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                         <TextBox x:Name="Description" Margin="0,0,0,5" HorizontalContentAlignment="Center" Width="336" Height="38"/>
                         <Label Content="Category" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-                        <ComboBox x:Name="CatCombo" Text="Cat. from list" Margin="0,0,0,5" Width="335">
-                            <ComboBoxItem>Folk</ComboBoxItem>
-                            <ComboBoxItem>Battle</ComboBoxItem>
-                            <ComboBoxItem>Tavern</ComboBoxItem>
-                            <ComboBoxItem>Forest</ComboBoxItem>
-                            <ComboBoxItem>Cavern</ComboBoxItem>
-                            <ComboBoxItem>Night</ComboBoxItem>
-                            <ComboBoxItem>Epic moment</ComboBoxItem>
+                        <ComboBox x:Name="CatCombo" Text="Cat. from list" Margin="0,0,0,5" Width="335" HorizontalAlignment="Center" SelectionChanged="CategoryChanged">
+                            <ComboBoxItem Content="Folk Music" Tag="Folk"/>
+                            <ComboBoxItem Content="Battle Music" Tag="Battle"/>
+                            <ComboBoxItem Content="Tavern Music" Tag="Tavern"/>
+                            <ComboBoxItem Content="Forest Ambient" Tag="Forest"/>
+                            <ComboBoxItem Content="Cavern Ambient" Tag="Cavern"/>
+                            <ComboBoxItem Content="Night Ambient" Tag="Night"/>
+                            <ComboBoxItem Content="Epic Moment" Tag="Epic"/>
                         </ComboBox>
                         <Label Content="Tags" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                         <TextBox x:Name="Tags" HorizontalContentAlignment="Center" Width="336"/>

@@ -9,7 +9,7 @@ namespace MusicLibrary2.Database
 {
     internal class SoundtrackRepo
     {
-        private const string Connection = "Data Source=musiclibrary.db;";
+        private const string Connection = "Data Source=Musiclibrary.db;";
         public static List<Soundtrack> Folk = new List<Soundtrack>();
         public static List<Soundtrack> Battle = new List<Soundtrack>();
         public static List<Soundtrack> Tavern = new List<Soundtrack>();

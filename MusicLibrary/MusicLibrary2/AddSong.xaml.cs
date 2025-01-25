@@ -22,6 +22,7 @@ namespace MusicLibrary2
     {
         private UserControl _uc;
         private string selectedFilePath;
+        private string category;
         public AddSong(UserControl uc)
         {
             InitializeComponent();
@@ -37,7 +38,6 @@ namespace MusicLibrary2
         {
             string title = Title.Text;
             string description = Description.Text;
-            string category = CatCombo.Text;
             string tags = Tags.Text == "" ? "N/O" : Tags.Text;
             string projectRoot = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
             string destinationDirectory = System.IO.Path.Combine(projectRoot, "Soundtracks");
@@ -127,6 +127,12 @@ namespace MusicLibrary2
                 selectedFilePath = openFileDialog.FileName;
                 SelectedFile.Text = selectedFilePath;
             }
+        }
+
+        private void CategoryChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBoxItem item = (ComboBoxItem)CatCombo.SelectedItem;
+            category = item.Tag.ToString();
         }
     }
 }
