@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace MusicLibrary.ViewModel
+namespace MusicLibrary2.ViewModel
 {
     public class RelayCommand : ICommand
     {

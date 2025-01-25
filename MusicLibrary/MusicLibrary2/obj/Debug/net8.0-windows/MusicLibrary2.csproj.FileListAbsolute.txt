@@ -51,3 +51,4 @@ C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debu
 C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\ForestCategory.baml
 C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\NightCategory.baml
 C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\obj\Debug\net8.0-windows\TavernCategory.baml
+C:\Users\stach\Documents\GitHub\MusicLibrary\MusicLibrary\MusicLibrary2\bin\Debug\net8.0-windows\TagLibSharp.dll

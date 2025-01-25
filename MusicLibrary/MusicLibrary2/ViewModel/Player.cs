@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicLibrary.ViewModel
+namespace MusicLibrary2.ViewModel
 {
     class Player
     {

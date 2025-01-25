@@ -21,8 +21,7 @@ namespace MusicLibrary2
         {
             InitializeComponent();
 
-            //Database.DatabaseInit.InitDatabase();
-            //DataContext = new ViewModel.SoundtrackViewModel();
+            Database.DatabaseInit.InitDatabase();
 
             NavigateTo(new FolkCategory());
         }

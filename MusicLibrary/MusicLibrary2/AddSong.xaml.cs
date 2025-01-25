@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using MusicLibrary2.Database;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,7 +25,7 @@ namespace MusicLibrary2
         public AddSong(UserControl uc)
         {
             InitializeComponent();
-            _uc = uc; ;
+            _uc = uc;
         }
 
         private void backClicked (object sender, RoutedEventArgs e)
@@ -37,20 +38,58 @@ namespace MusicLibrary2
             string title = Title.Text;
             string description = Description.Text;
             string category = CatCombo.Text;
-            string tags = Tags.Text;
+            string tags = Tags.Text == "" ? "N/O" : Tags.Text;
+            string projectRoot = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
+            string destinationDirectory = System.IO.Path.Combine(projectRoot, "Soundtracks");
+            string destinationPath = System.IO.Path.Combine(destinationDirectory, System.IO.Path.GetFileName(selectedFilePath));
 
-            PopUpText.Text = "Song Added to the library!" + title + "\n" + description + "\n" + category + "\n" + tags;
+            PopUpText.Text = "Song Added to the library!";
             PopUp.Visibility = Visibility.Visible;
             //add song to database
-            /*
-             * try {
-             * 
-             * }
-             * catch (Exception ex)
-             * {
-             * 
-             * }
-             */
+            try
+            {
+                File.Copy(selectedFilePath, destinationPath, overwrite: true);
+                TagLib.File file = TagLib.File.Create(selectedFilePath);
+                TimeSpan duration = file.Properties.Duration/2;
+                Soundtrack soundtrack = new Soundtrack();
+                soundtrack.Filename = System.IO.Path.GetFileName(selectedFilePath);
+                soundtrack.DisplayName = title;
+                soundtrack.Description = description;
+                soundtrack.CategoryID = Database.SoundtrackRepo.GetCategoryID(category);
+                soundtrack.Duration = duration.ToString();
+                soundtrack.Tags = tags;
+                switch (category)
+                {
+                    case "Folk":
+                        Database.SoundtrackRepo.Folk.Add(soundtrack);
+                        break;
+                    case "Battle":
+                        Database.SoundtrackRepo.Battle.Add(soundtrack);
+                        break;
+                    case "Tavern":
+                        Database.SoundtrackRepo.Tavern.Add(soundtrack);
+                        break;
+                    case "Forest":
+                        Database.SoundtrackRepo.Forest.Add(soundtrack);
+                        break;
+                    case "Cavern":
+                        Database.SoundtrackRepo.Cavern.Add(soundtrack);
+                        break;
+                    case "Night":
+                        Database.SoundtrackRepo.Night.Add(soundtrack);
+                        break;
+                    case "Epic":
+                        Database.SoundtrackRepo.Epic.Add(soundtrack);
+                        break;
+                }
+                Database.SoundtrackRepo.AddSoundtrack(soundtrack);
+            }
+            catch (Exception ex)
+            {
+                // Log or handle the exception
+                Console.WriteLine(ex.Message); // Problem 3 fix
+            }
+
             await Task.Delay(2500);
             PopUp.Visibility = Visibility.Hidden;
             ((MainWindow)Application.Current.MainWindow).NavigateTo(_uc);
@@ -69,7 +108,8 @@ namespace MusicLibrary2
 
         private void onFileDrop(object sender, DragEventArgs e)
         {
-            selectedFilePath = (string)e.Data.GetData(DataFormats.FileDrop);
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            selectedFilePath = files[0];
 
             SelectedFile.Text = selectedFilePath;
         }
