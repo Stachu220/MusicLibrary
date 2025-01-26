@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MusicLibrary2.Database;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +27,7 @@ namespace MusicLibrary2
             InitializeComponent();
 
 
-            CreateCircularButtons(myCanva, 8, 100);
+            CreateCircularButtons(myCanva, Database.SoundtrackRepo.Epic.Count(), 100);
         }
         private void CreateCircularButtons(Canvas canvas, int buttonCount, double radius)
         {
@@ -37,6 +39,7 @@ namespace MusicLibrary2
                 double angle = i * (360.0 / buttonCount) * Math.PI / 180; // Convert degrees to radians
                 double x = centerX + radius * Math.Cos(angle);
                 double y = centerY + radius * Math.Sin(angle);
+                Soundtrack soundtrack = SoundtrackRepo.Epic[i];
 
                 // Calculate button width based on the angle (wider on the outside, thinner on the inside)
                 double buttonWidth = 50 + (radius - 50) * Math.Abs(Math.Cos(angle)); // This adjusts the width dynamically
@@ -44,17 +47,23 @@ namespace MusicLibrary2
 
                 Button button = new Button
                 {
-                    Content = (i + 1).ToString(),
+                    Content = soundtrack.DisplayName,
                     Width = buttonWidth,
                     Height = buttonHeight,
                     Style = (Style)FindResource("SoundtrackButton")
                 };
+                button.Click += loadSoundtrack;
 
                 Canvas.SetLeft(button, x - buttonWidth / 2); // Adjust for button width
                 Canvas.SetTop(button, y - buttonHeight / 2); // Adjust for button height
 
                 canvas.Children.Add(button);
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void goToAdd(object sender, RoutedEventArgs e)
@@ -90,6 +99,56 @@ namespace MusicLibrary2
         private void goToNight(object sender, RoutedEventArgs e)
         {
             ((MainWindow)Application.Current.MainWindow).NavigateTo(new NightCategory());
+        }
+
+        private void loadSoundtrack(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.Tag is Soundtrack soundtrack)
+            {
+                Title.Text = soundtrack.DisplayName;
+                Description.Text = soundtrack.Description;
+                Tags.Text = string.Join(", ", soundtrack.Tags);
+                ViewModel.Player.TempTitle = soundtrack.Filename;
+            }
+        }
+
+        private void onRemoveClicked(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.Tag is Soundtrack soundtrack)
+            {
+                Database.SoundtrackRepo.RemoveSoundtrack(soundtrack);
+
+                for (int i = 0; i < SoundtrackRepo.Forest.Count(); i++)
+                {
+                    if (SoundtrackRepo.Forest[i] == soundtrack)
+                    {
+                        SoundtrackRepo.Forest[i] = SoundtrackRepo.Forest.Last();
+                        break;
+                    }
+                }
+                SoundtrackRepo.Forest.RemoveAt(SoundtrackRepo.Forest.Count() - 1);
+                ((MainWindow)Application.Current.MainWindow).NavigateTo(new ForestCategory());
+                string dirSoundtracks = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName + "\\Soundtracks";
+                File.Delete(dirSoundtracks + "\\" + soundtrack.Filename);
+            }
+        }
+        private void onPlayPauseClicked(object sender, RoutedEventArgs e)
+        {
+            if (ViewModel.Player.Instance.IsPlaying)
+            {
+                ViewModel.Player.Instance.Stop();
+                playPauseButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/play.png"));
+            }
+            else
+            {
+                ViewModel.Player.Instance.Play();
+                playPauseButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/pause.png"));
+            }
+        }
+
+        private void onVolumeChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            ViewModel.Player.Instance.SetVolume((int)volSlider.Value * 10);
         }
     }
 }

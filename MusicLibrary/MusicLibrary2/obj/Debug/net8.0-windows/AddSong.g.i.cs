@@ -141,7 +141,7 @@ namespace MusicLibrary2 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MusicLibrary2;V1.0.0.0;component/addsong.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MusicLibrary2;component/addsong.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddSong.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

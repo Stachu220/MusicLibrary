@@ -138,13 +138,12 @@
         <Canvas x:Name="myCanva" Width="250" Height="250" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="62,0,0,0" Grid.Column="2">
             <!-- Outer Circle -->
             <Ellipse Width="250" Height="250" Stroke="Black" StrokeThickness="2"/>
-            <Button Canvas.Left="100" Canvas.Top="100" Width="50" Height="50">
+            <Button Canvas.Left="100" Canvas.Top="100" Width="50" Height="50" Click="onPlayPauseClicked">
                 <Button.Style>
                     <StaticResource ResourceKey="SoundtrackButton"/>
                 </Button.Style>
                 <Button.Content>
-                    <Image Source="/Images/play.png" Height="32" Width="32" HorizontalAlignment="Center"/>
-
+                    <Image x:Name="playPauseButton" Source="/Images/play.png" Height="32" Width="32" HorizontalAlignment="Center"/>
                 </Button.Content>
             </Button>
         </Canvas>
@@ -159,19 +158,22 @@
         </Button>
 
         <!-- Details Section -->
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="486,45,0,0" Height="389" Width="177" Grid.Column="2">
-            <TextBlock Text="Title" FontWeight="Bold" Margin="0,5,0,10" HorizontalAlignment="Center"/>
-            <TextBlock Text="Description:" Margin="0,5,0,10" Height="50"/>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="486,45,0,0" Height="405" Width="177" Grid.Column="2">
+            <TextBlock x:Name="Title" Text="Title" FontWeight="Bold" Margin="0,5,0,10" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="Description" Text="Description:" Margin="0,5,0,10" Height="50" TextWrapping="Wrap"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Tags" Text="tags" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,5"/>
+            </StackPanel>
             <Line Stroke="Black" X1="0" X2="177" StrokeThickness="1" Margin="0,0,0,10"/>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Volume:" VerticalAlignment="Center"/>
-                <Slider Width="100" Margin="5,0,0,0"/>
+            <StackPanel x:Name="VolumeSlider" Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock x:Name="vol"  Text="Volume:" VerticalAlignment="Center"/>
+                <Slider x:Name="volSlider" Width="100" Margin="5,0,0,0" ValueChanged="onVolumeChanged" Value="10"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,200">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,195">
                 <TextBlock Text="Loop:" VerticalAlignment="Center"/>
-                <ToggleButton Content="" Margin="15,0,0,0" Width="100"/>
+                <ToggleButton x:Name="LoopToggle" Content="" Margin="15,0,0,0" Width="100"/>
             </StackPanel>
-            <Button Content="Remove" Width="100"/>
+            <Button Content="Remove" Width="100" Click="onRemoveClicked"/>
         </StackPanel>
     </Grid>
 </UserControl>

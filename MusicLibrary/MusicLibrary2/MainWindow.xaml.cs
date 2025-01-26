@@ -22,8 +22,10 @@ namespace MusicLibrary2
             InitializeComponent();
 
             Database.DatabaseInit.InitDatabase();
+            Database.SoundtrackRepo.GetAllSoundtracks();
 
-            NavigateTo(new FolkCategory());
+
+        NavigateTo(new FolkCategory());
         }
 
         public void NavigateTo(object page)
