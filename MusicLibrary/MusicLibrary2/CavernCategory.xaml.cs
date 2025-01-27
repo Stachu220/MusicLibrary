@@ -57,15 +57,21 @@ namespace MusicLibrary2
                 double buttonWidth = 50 + (radius - 50) * Math.Abs(Math.Cos(angle)); // This adjusts the width dynamically
                 double buttonHeight = 50 + (radius - 50) * Math.Abs(Math.Sin(angle)); // You can adjust height as well
                 Soundtrack soundtrack = SoundtrackRepo.Cavern[i];
+                TextBlock textBlock = new TextBlock
+                {
+                    Text = soundtrack.DisplayName,
+                    TextWrapping = TextWrapping.Wrap,
+                    MaxWidth = buttonWidth // Set max width to prevent overflow
+                };
 
                 Button button = new Button
                 {
-                    Content = soundtrack.DisplayName,
+                    Content = textBlock,
                     Width = buttonWidth,
                     Height = buttonHeight,
                     Style = (Style)FindResource("SoundtrackButton"),
                     Tag = soundtrack
-                };
+                }; 
                 button.Click += loadSoundtrack;
 
                 Canvas.SetLeft(button, x - buttonWidth / 2); // Adjust for button width

@@ -58,13 +58,20 @@ namespace MusicLibrary2
                 // Calculate button width based on the angle (wider on the outside, thinner on the inside)
                 double buttonWidth = 50 + (radius - 50) * Math.Abs(Math.Cos(angle)); // This adjusts the width dynamically
                 double buttonHeight = 50 + (radius - 50) * Math.Abs(Math.Sin(angle)); // You can adjust height as well
+                TextBlock textBlock = new TextBlock
+                {
+                    Text = soundtrack.DisplayName,
+                    TextWrapping = TextWrapping.Wrap,
+                    MaxWidth = buttonWidth // Set max width to prevent overflow
+                };
 
                 Button button = new Button
                 {
-                    Content = soundtrack.DisplayName,
+                    Content = textBlock,
                     Width = buttonWidth,
                     Height = buttonHeight,
-                    Style = (Style)FindResource("SoundtrackButton")
+                    Style = (Style)FindResource("SoundtrackButton"),
+                    Tag = soundtrack
                 };
                 button.Click += loadSoundtrack;
 
