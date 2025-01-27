@@ -1,6 +1,7 @@
 ﻿using MusicLibrary2.Database;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -23,17 +24,31 @@ namespace MusicLibrary2
     /// </summary>
     public partial class NightCategory : UserControl
     {
+        private bool init = true;
+        private int page = 0;
+        private TimeSpan interval;
         public NightCategory()
         {
+            init = true;
+            page = 0;
             InitializeComponent();
 
-
-            CreateCircularButtons(myCanva, Database.SoundtrackRepo.Night.Count(), 100);
+            volSlider.Value = ViewModel.Player.vol / 10;
+            init = false;
+            if (Database.SoundtrackRepo.Night.Count() > 8)
+            {
+                CreateCircularButtons(myCanva, 8, 100);
+            }
+            else
+            {
+                CreateCircularButtons(myCanva, Database.SoundtrackRepo.Night.Count(), 100);
+            }
         }
         private void CreateCircularButtons(Canvas canvas, int buttonCount, double radius)
         {
             double centerX = canvas.Width / 2;
             double centerY = canvas.Height / 2;
+
 
             for (int i = 0; i < buttonCount; i++)
             {
@@ -44,7 +59,7 @@ namespace MusicLibrary2
                 // Calculate button width based on the angle (wider on the outside, thinner on the inside)
                 double buttonWidth = 50 + (radius - 50) * Math.Abs(Math.Cos(angle)); // This adjusts the width dynamically
                 double buttonHeight = 50 + (radius - 50) * Math.Abs(Math.Sin(angle)); // You can adjust height as well
-                Soundtrack soundtrack = SoundtrackRepo.Night[i];
+                Soundtrack soundtrack = SoundtrackRepo.Night[i + 8 * page];
                 Button button = new Button
                 {
                     Content = soundtrack.DisplayName,
@@ -105,6 +120,8 @@ namespace MusicLibrary2
                 Description.Text = soundtrack.Description;
                 Tags.Text = string.Join(", ", soundtrack.Tags);
                 ViewModel.Player.TempTitle = soundtrack.Filename;
+
+                interval = TimeSpan.Parse(soundtrack.Duration);
             }
         }
 
@@ -129,7 +146,6 @@ namespace MusicLibrary2
             }
         }
         private void onPlayPauseClicked(object sender, RoutedEventArgs e)
-        private void onPlayPauseClicked(object sender, RoutedEventArgs e)
         {
             if (ViewModel.Player.Instance.IsPlaying)
             {
@@ -140,12 +156,92 @@ namespace MusicLibrary2
             {
                 ViewModel.Player.Instance.Play();
                 playPauseButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/pause.png"));
+
+                var timer = new System.Windows.Threading.DispatcherTimer
+                {
+                    Interval = interval
+                };
+
+                timer.Tick += (s, args) =>
+                {
+                    if(playPauseButton.Source == new BitmapImage(new Uri("pack://application:,,,/Images/pause.png")) || LoopToggle.IsChecked == false)
+                    {
+                        playPauseButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/play.png"));
+                    }
+                        timer.Stop();
+                };
+
+                timer.Start();
             }
         }
 
+
         private void onVolumeChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            ViewModel.Player.Instance.SetVolume((int)volSlider.Value * 10);
+            if (!init)
+                ViewModel.Player.Instance.SetVolume((int)volSlider.Value * 10);
+        }
+
+        private void onLoop(object sender, RoutedEventArgs e)
+        {
+            if (ViewModel.Player.IsLoop)
+            {
+                ViewModel.Player.IsLoop = false;
+            }
+            else
+            {
+                ViewModel.Player.IsLoop = true;
+            }
+        }
+
+        private void RemoveCircularButtons(Canvas canvas)
+        {
+            // Find all buttons in the canvas except the PPButton
+            var buttonsToRemove = canvas.Children
+                .OfType<Button>()
+                .Where(button => button != PPButton) // Skip the PPButton
+                .ToList();
+
+            foreach (var button in buttonsToRemove)
+            {
+                canvas.Children.Remove(button);
+            }
+        }
+
+
+
+        private void nextPage(object sender, RoutedEventArgs e)
+        {
+            if (Database.SoundtrackRepo.Night.Count() - 8 * (page+1) > 0)
+            {
+                ++page;
+                RemoveCircularButtons(myCanva);
+                if (Database.SoundtrackRepo.Night.Count() - 8 * page > 8 * page)
+                {
+                    CreateCircularButtons(myCanva, 8, 100);
+                }
+                else
+                {
+                    CreateCircularButtons(myCanva,Database.SoundtrackRepo.Night.Count() - 8 * page, 100);
+                }
+            }
+        }
+
+        private void prevPage(object sender, RoutedEventArgs e)
+        {
+            if (page > 0)
+            {
+                --page;
+                RemoveCircularButtons(myCanva);
+                if (Database.SoundtrackRepo.Night.Count() - 8 * page > 8 * page)
+                {
+                    CreateCircularButtons(myCanva, 8, 100);
+                }
+                else
+                {
+                    CreateCircularButtons(myCanva, Database.SoundtrackRepo.Night.Count() - 8 * page, 100);
+                }
+            }
         }
     }
 }

@@ -78,6 +78,46 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style TargetType="ToggleButton" x:Key="StyledToggleButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border 
+                x:Name="Border"
+                CornerRadius="10"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="2"
+                Padding="5"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}">
+                            <ContentPresenter 
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Content="{TemplateBinding Content}" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#4CAF50" />
+                                <Setter TargetName="Border" Property="BorderBrush" Value="#388E3C" />
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="#F44336" />
+                                <Setter TargetName="Border" Property="BorderBrush" Value="#D32F2F" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Opacity" Value="0.9" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
 
     </UserControl.Resources>
     <Grid x:Name="MainView" Visibility="Visible">
@@ -91,8 +131,8 @@
             <ColumnDefinition Width="664*"/>
         </Grid.ColumnDefinitions>
         <!-- Navigation Arrows -->
-        <Button Content="⟵" HorizontalAlignment="Left" VerticalAlignment="Center" Width="30" Height="30"/>
-        <Button Content="⟶" HorizontalAlignment="Left" VerticalAlignment="Center" Width="30" Height="30" Margin="432,0,0,0" RenderTransformOrigin="1,0" Grid.Column="2"/>
+        <Button Content="⟵" HorizontalAlignment="Left" VerticalAlignment="Center" Width="30" Height="30" Click="prevPage"/>
+        <Button Content="⟶" HorizontalAlignment="Left" VerticalAlignment="Center" Width="30" Height="30" Margin="432,0,0,0" RenderTransformOrigin="1,0" Grid.Column="2" Click="nextPage"/>
 
         <!-- Category Tabs -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="800" Height="40" Grid.ColumnSpan="3">
@@ -138,13 +178,12 @@
         <Canvas x:Name="myCanva" Width="250" Height="250" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="62,0,0,0" Grid.Column="2">
             <!-- Outer Circle -->
             <Ellipse Width="250" Height="250" Stroke="Black" StrokeThickness="2"/>
-            <Button Canvas.Left="100" Canvas.Top="100" Width="50" Height="50" Click="onPlayPauseClicked">
+            <Button x:Name="PPButton" Canvas.Left="100" Canvas.Top="100" Width="50" Height="50" Click="onPlayPauseClicked">
                 <Button.Style>
                     <StaticResource ResourceKey="SoundtrackButton"/>
                 </Button.Style>
                 <Button.Content>
                     <Image x:Name="playPauseButton" Source="/Images/play.png" Height="32" Width="32" HorizontalAlignment="Center"/>
-
                 </Button.Content>
             </Button>
         </Canvas>
@@ -172,7 +211,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,0,0,195">
                 <TextBlock Text="Loop:" VerticalAlignment="Center"/>
-                <ToggleButton x:Name="LoopToggle" Content="" Margin="15,0,0,0" Width="100"/>
+                <ToggleButton x:Name="LoopToggle" Content="" Width="49" Style="{StaticResource StyledToggleButton}" Checked="onLoop" Unchecked="onLoop" Height="18" Margin="35,0,0,0"/>
             </StackPanel>
             <Button Content="Remove" Width="100" Click="onRemoveClicked"/>
         </StackPanel>

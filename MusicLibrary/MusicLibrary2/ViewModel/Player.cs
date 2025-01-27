@@ -13,6 +13,7 @@ namespace MusicLibrary2.ViewModel
         private static readonly Lazy<Player> _instance = new Lazy<Player>(() => new Player());
         private static LibVLC _libVLC;
         private static MediaPlayer _mediaPlayer;
+        public static int vol = 10;
 
         private static string _tempTitle;
         public static string TempTitle
@@ -35,12 +36,12 @@ namespace MusicLibrary2.ViewModel
             Core.Initialize();
             _libVLC = new LibVLC();
             _mediaPlayer = new MediaPlayer(_libVLC);
-            _mediaPlayer.EndReached += (sender, args) =>
+            _mediaPlayer.EndReached += async (sender, args) =>
             {
                 if (_isLoop)
                 {
-                    _mediaPlayer.Stop();
-                    _mediaPlayer.Play();
+                    await Task.Delay(10); // Add a small delay
+                    Play();
                 }
             };
         }
@@ -69,6 +70,7 @@ namespace MusicLibrary2.ViewModel
         public void SetVolume(int volume)
         {
             _mediaPlayer.Volume = volume;
+            vol = volume;
         }
 
         public bool IsPlaying => _mediaPlayer.IsPlaying;

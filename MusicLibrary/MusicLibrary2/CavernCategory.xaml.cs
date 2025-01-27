@@ -22,12 +22,25 @@ namespace MusicLibrary2
     /// </summary>
     public partial class CavernCategory : UserControl
     {
+        private bool init = true;
+        private int page = 0;
+        private TimeSpan interval;
         public CavernCategory()
         {
+            init = true;
+            page = 0;
             InitializeComponent();
 
-
-            CreateCircularButtons(myCanva, Database.SoundtrackRepo.Cavern.Count(), 100);
+            volSlider.Value = ViewModel.Player.vol / 10;
+            init = false;
+            if (Database.SoundtrackRepo.Cavern.Count() > 8)
+            {
+                CreateCircularButtons(myCanva, 8, 100);
+            }
+            else
+            {
+                CreateCircularButtons(myCanva, Database.SoundtrackRepo.Cavern.Count(), 100);
+            }
         }
         private void CreateCircularButtons(Canvas canvas, int buttonCount, double radius)
         {
@@ -96,6 +109,7 @@ namespace MusicLibrary2
         {
             ((MainWindow)Application.Current.MainWindow).NavigateTo(new EpicCategory());
         }
+
         private void loadSoundtrack(object sender, RoutedEventArgs e)
         {
             if (sender is Button button && button.Tag is Soundtrack soundtrack)
@@ -104,6 +118,8 @@ namespace MusicLibrary2
                 Description.Text = soundtrack.Description;
                 Tags.Text = string.Join(", ", soundtrack.Tags);
                 ViewModel.Player.TempTitle = soundtrack.Filename;
+
+                interval = TimeSpan.Parse(soundtrack.Duration);
             }
         }
 
@@ -138,12 +154,92 @@ namespace MusicLibrary2
             {
                 ViewModel.Player.Instance.Play();
                 playPauseButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/pause.png"));
+
+                var timer = new System.Windows.Threading.DispatcherTimer
+                {
+                    Interval = interval
+                };
+
+                timer.Tick += (s, args) =>
+                {
+                    if (playPauseButton.Source == new BitmapImage(new Uri("pack://application:,,,/Images/pause.png")) || LoopToggle.IsChecked == false)
+                    {
+                        playPauseButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/play.png"));
+                    }
+                    timer.Stop();
+                };
+
+                timer.Start();
             }
         }
 
+
         private void onVolumeChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            ViewModel.Player.Instance.SetVolume((int)volSlider.Value * 10);
+            if (!init)
+                ViewModel.Player.Instance.SetVolume((int)volSlider.Value * 10);
+        }
+
+        private void onLoop(object sender, RoutedEventArgs e)
+        {
+            if (ViewModel.Player.IsLoop)
+            {
+                ViewModel.Player.IsLoop = false;
+            }
+            else
+            {
+                ViewModel.Player.IsLoop = true;
+            }
+        }
+
+        private void RemoveCircularButtons(Canvas canvas)
+        {
+            // Find all buttons in the canvas except the PPButton
+            var buttonsToRemove = canvas.Children
+                .OfType<Button>()
+                .Where(button => button != PPButton) // Skip the PPButton
+                .ToList();
+
+            foreach (var button in buttonsToRemove)
+            {
+                canvas.Children.Remove(button);
+            }
+        }
+
+
+
+        private void nextPage(object sender, RoutedEventArgs e)
+        {
+            if (Database.SoundtrackRepo.Cavern.Count() - 8 * (page + 1) > 0)
+            {
+                ++page;
+                RemoveCircularButtons(myCanva);
+                if (Database.SoundtrackRepo.Cavern.Count() - 8 * page > 8 * page)
+                {
+                    CreateCircularButtons(myCanva, 8, 100);
+                }
+                else
+                {
+                    CreateCircularButtons(myCanva, Database.SoundtrackRepo.Cavern.Count() - 8 * page, 100);
+                }
+            }
+        }
+
+        private void prevPage(object sender, RoutedEventArgs e)
+        {
+            if (page > 0)
+            {
+                --page;
+                RemoveCircularButtons(myCanva);
+                if (Database.SoundtrackRepo.Cavern.Count() - 8 * page > 8 * page)
+                {
+                    CreateCircularButtons(myCanva, 8, 100);
+                }
+                else
+                {
+                    CreateCircularButtons(myCanva, Database.SoundtrackRepo.Cavern.Count() - 8 * page, 100);
+                }
+            }
         }
     }
 }
